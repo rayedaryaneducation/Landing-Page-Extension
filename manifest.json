@@ -3,7 +3,7 @@
   "name": "My Extension",
   "version": "1.0",
   "background": {
-    "service_worker": "extension.js"
+    "service_worker": "index.js"
   },
   "permissions": [
     "tabs"
