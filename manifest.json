@@ -1,11 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "My Extension",
+  "name": "My Startup Extension",
   "version": "1.0",
   "background": {
-    "service_worker": "index.js"
+    "service_worker": "background.js"
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage" 
   ]
 }
