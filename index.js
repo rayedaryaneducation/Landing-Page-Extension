@@ -5,7 +5,7 @@ const defaultImage = ``
 const timeDiv = document.getElementById('time-h1')
 function render(){
     try{
-        fetch(`https://api.unsplash.com/photos/random?query=${userSearch.value}&client_id=${accessKey}`)
+        fetch(`https://api.unsplash.com/photos/random?query=&client_id=${accessKey}`)
             .then(res => res.json())
             .then(data => bodyImage.style.backgroundImage = `url('${data.urls.full}')`)
     } catch (error) {
@@ -24,10 +24,9 @@ function updateTime() {
 updateTime(); 
 setInterval(updateTime, 1000);
 document.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    let userSearchHist = userSearch.value
-    render()
-    userSearch.value =''
+  if (event.key === 'Enter'){
+    window.open(`https://www.google.com/search?query=${userSearch.value}`, '_blank');
+    userSearch.value =  ''
   }
 });
 
