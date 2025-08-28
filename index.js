@@ -1,14 +1,15 @@
 chrome.windows.onCreated.addListener(function() {
   chrome.tabs.create({url:"index.html"});
 })
-function setFocusToTextBox(){
-    document.getElementById("mytext").focus();
-}
+
 const accessKey = 'G3h4jjOce324fBCFgl2ozboTCTzr30cJ3lVQwl_5c4E';
 const bodyImage = document.getElementById('myElement')
 const userSearch = document.getElementById('user-search')
 const defaultImage = ``
 const timeDiv = document.getElementById('time-h1')
+function setFocusToTextBox(){
+    userSearch.focus();
+}
 function render(){
     try{
         fetch(`https://api.unsplash.com/photos/random?query=&client_id=${accessKey}`)
