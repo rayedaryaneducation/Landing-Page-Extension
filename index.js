@@ -7,9 +7,7 @@ const bodyImage = document.getElementById('myElement')
 const userSearch = document.getElementById('user-search')
 const defaultImage = ``
 const timeDiv = document.getElementById('time-h1')
-function setFocusToTextBox(){
-    userSearch.focus();
-}
+
 function render(){
     try{
         fetch(`https://api.unsplash.com/photos/random?query=&client_id=${accessKey}`)
