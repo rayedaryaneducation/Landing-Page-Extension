@@ -1,7 +1,24 @@
 chrome.runtime.onStartup.addListener(() => {
-  // Use `chrome.runtime.getURL` to get the full URL of your extension page.
   const pageUrl = chrome.runtime.getURL("index.html");
+  chrome.tabs.query({ url: pageUrl }, (tabs) => {
+    if (tabs.length === 0) {
+      chrome.tabs.create({ url: pageUrl });
+    }
+  });
+});
 
-  // Create a new tab with your extension's landing page.
-  chrome.tabs.create({ url: pageUrl });
+chrome.windows.onCreated.addListener((window) => {
+  const pageUrl = chrome.runtime.getURL("index.html");
+  chrome.tabs.query({ url: pageUrl }, (tabs) => {
+    if (tabs.length === 0) {
+      chrome.tabs.create({ url: pageUrl, windowId: window.id });
+    }
+  });
+});
+
+chrome.runtime.onInstalled.addListener((details) => {
+  if (details.reason === "install" || details.reason === "update") {
+    const pageUrl = chrome.runtime.getURL("index.html");
+    chrome.tabs.create({ url: pageUrl });
+  }
 });
