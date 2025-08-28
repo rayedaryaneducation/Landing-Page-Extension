@@ -9,6 +9,6 @@
     "newtab": "index.html"
   },
   "permissions": [
-    "tabs",
+    "tabs"
   ]
 }
