@@ -1,11 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "My Startup Extension",
+  "name": "New Tab with News & Gmail",
   "version": "1.0",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "permissions": [
-    "tabs"
-  ]
+    "tabs",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://api.unsplash.com/*",
+    "https://gnews.io/*",
+    "https://www.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "301175163196-0hij71l5f4qg64jbqjp1gcnvuo8d8t3o.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  }
 }
