@@ -1,10 +1,16 @@
-body {
+body{
     margin: 0;
     width: 100vw;
     height: 100vh;
+<<<<<<< HEAD
     overflow: hidden;
 }
 input {
+=======
+    
+}
+input{
+>>>>>>> parent of a2a0cea (Add updated files)
     margin-top: 2em;
     border: none;
     box-shadow: 0px 0px 3px black;
@@ -12,15 +18,21 @@ input {
     line-height: 2rem;
     padding: 0.25em;
     width: 40vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     text-align: center;
+    
 }
-.top {
+
+.top{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+<<<<<<< HEAD
 #myElement {
+=======
+#my-element{
+>>>>>>> parent of a2a0cea (Add updated files)
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -28,9 +40,15 @@ input {
     display: flex;
     flex-direction: column;
 }
+<<<<<<< HEAD
 .time {
     width: 100%;
     flex: 1;
+=======
+.time{
+    width: 100%;
+    height: 90vh;
+>>>>>>> parent of a2a0cea (Add updated files)
     font-size: 3.5em;
     color: white;
     display: flex;
@@ -39,6 +57,7 @@ input {
     align-items: center;
     text-shadow: 0px 0px 5px black;
     font-family: 'Orbitron';
+<<<<<<< HEAD
 }
 .hidden {
     display: none;
@@ -169,4 +188,6 @@ input {
 }
 .gmail-email a:hover {
     text-decoration: underline;
+=======
+>>>>>>> parent of a2a0cea (Add updated files)
 }
