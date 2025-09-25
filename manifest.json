@@ -6,18 +6,10 @@
     "newtab": "index.html"
   },
   "permissions": [
-    "tabs",
-    "identity"
-  ],
+    "tabs"
+],
   "host_permissions": [
     "https://api.unsplash.com/*",
-    "https://gnews.io/*",
-    "https://www.googleapis.com/*"
-  ],
-  "oauth2": {
-    "client_id": "301175163196-0hij71l5f4qg64jbqjp1gcnvuo8d8t3o.apps.googleusercontent.com",
-    "scopes": [
-      "https://www.googleapis.com/auth/gmail.readonly"
-    ]
-  }
+    "https://gnews.io/*"
+  ]
 }
